@@ -1,0 +1,10 @@
+You don't need this whole project!  The only file you need is the ColorFade Class Module.  The rest of this stuff just shows you how it works!
+The ColorFade can be used to determine a single color and any point between two colors.  For example, ColorFade will return "grey" between "black" and "white."
+ColorFade provides an automated PaintObj method for painting forms and picture boxes.
+If you want to use multiple cycles, call PaintObj2 instead of PaintObj.
+The more cycles you use, the higher the chance that you will get "breaks" in the line drawing.  This is especially true on diagonal or vertical fades, or older, slower machines.
+Officially, the cycles can go as high as 20 before causing a strain on resources, but anything higher than 12 looks like crap.
+Standard frames do not have a transperency setting, so you won't get a good effect on forms.  Consider drawing frames inside a picture box for aesthetics.
+The key to a good fade is to pick similar colors with a large amount of difference in them.  This sounds impossible, but it can be done.  Black and white are two good examples.
+IMPORTANT! Set your auto-redraws to true on whatever you intend on fading!  Also set your labels to transparent.
+To maintain a form fade whenever the form is drawn, add code to the Form_Resize event.  DO NOT place a "Stop" statement in the Resize event.  Try it to find out why.
